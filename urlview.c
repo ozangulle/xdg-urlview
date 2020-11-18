@@ -195,8 +195,21 @@ int main (int argc, char **argv)
   
   /*** read the initialization file ***/
 
-  pw = getpwuid (getuid ());
-  snprintf (buf, sizeof (buf), "%s/.urlview", pw->pw_dir);
+  char *xdg_config_home;
+  xdg_config_home = getenv("XDG_CONFIG_HOME");
+  if (xdg_config_home == NULL)
+  {
+    xdg_config_home = getenv("HOME");
+    strcpy(xdg_config_home, "/.config");
+  }
+
+  if (xdg_config_home == NULL)
+  {
+    pw = getpwuid (getuid ());
+    snprintf (buf, sizeof (buf), "%s/.urlview", pw->pw_dir);
+  }
+  else
+    snprintf (buf, sizeof (buf), "%s/urlview/urlview", xdg_config_home);
 
   /*** Check for users rc-file ***/
   if (stat (buf,&stat_buf) == -1)
