@@ -14,3 +14,9 @@ The list of configuration locations in order of precedence:
 - $XDG_CONFIG_HOME/urlview/urlview
 - $HOME/.config/urlview/urlview
 - $HOME/.urlview.
+
+## Installation
+If you use [Homebrew](https://brew.sh/), you can install this program from the tap [erikw/homebrew-xdg-urlview](https://github.com/erikw/homebrew-xdg-urlview):
+```console
+$ brew install erikw/xdg-urlview/xdg-urlview
+```
