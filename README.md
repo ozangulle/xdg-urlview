@@ -20,7 +20,7 @@ The list of configuration locations in order of precedence:
 In general, follow the instructions in [INSTALL](INSTALL).
 
 ### Homebrew
-If you use [Homebrew](https://brew.sh/), you can install this program from the tap [erikw/homebrew-xdg-urlview](https://github.com/erikw/homebrew-xdg-urlview):
+If you use [Homebrew](https://brew.sh/), you can install this program from the tap [erikw/tap](https://github.com/erikw/homebrew-tap):
 ```console
-$ brew install erikw/xdg-urlview/xdg-urlview
+$ brew install erikw/tap/xdg-urlview
 ```
